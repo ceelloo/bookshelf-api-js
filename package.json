@@ -1,0 +1,23 @@
+{
+	"name": "bookshelf-api",
+	"version": "1.0.0",
+	"main": "server.js",
+	"type": "module",
+	"scripts": {
+		"dev": "node server.js",
+		"format": "npx @biomejs/biome format --write .",
+		"lint": "npx @biomejs/biome lint --write .",
+		"check": "npx @biomejs/biome check --write ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@hapi/hapi": "^21.4.0",
+		"date-fns": "^4.1.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4"
+	}
+}
