@@ -4,18 +4,24 @@
 	"main": "server.js",
 	"type": "module",
 	"scripts": {
-		"dev": "node server.js",
+		"dev": "node ./src/server.js",
+		"start": "node ./src/server.js",
 		"format": "npx @biomejs/biome format --write .",
 		"lint": "npx @biomejs/biome lint --write .",
-		"check": "npx @biomejs/biome check --write ."
+		"check": "npx @biomejs/biome check --write .",
+		"db:migrate": "npx knex migrate:latest"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"description": "",
 	"dependencies": {
+		"@hapi/boom": "^10.0.1",
 		"@hapi/hapi": "^21.4.0",
-		"date-fns": "^4.1.0"
+		"better-sqlite3": "^11.10.0",
+		"date-fns": "^4.1.0",
+		"joi": "^17.13.3",
+		"knex": "^3.1.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4"
