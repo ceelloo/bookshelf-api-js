@@ -1,6 +1,9 @@
 import { createServer } from "./cmd/api.js"
+import { initializeDatabase } from "./internal/database/db.js"
 
 const start = async () => {
+  await initializeDatabase()
+
 	const server = await createServer()
 	await server.start()
 	console.log(`Server running at: ${server.info.uri}`)
